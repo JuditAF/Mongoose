@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-let { User } = require ('./userModel');
-let { Profile } = require ('./profileModel');
-let { Creedentials } = require ('./creedentialsModel');
+const { User } = require ('./userModel');
+const { Profile } = require ('./profileModel');
+const { Creedentials } = require ('./creedentialsModel');
 
 // const mongo = 'mongodb://localhost:27017/codenotch';                                     // DEPRECATED?
 // mongoose.connect( mongo, {useNewUrlParser: true, useUnifiedTopology: true} );
