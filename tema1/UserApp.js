@@ -42,13 +42,13 @@ let profile1 = new Profile ({
     rol: "programador Full_Stack"
 });
 
-let profile2 = new Profile ({
-    name: "Julia",
-    surname: "Nuñez",
-    dateOfBirth: new Date(1990, 11, 23),
-    Comments: "perfil Senior",
-    rol: "Chief Information Security Officer"
-});
+// let profile2 = new Profile ({
+//     name: "Julia",
+//     surname: "Nuñez",
+//     dateOfBirth: new Date(1990, 11, 23),
+//     Comments: "perfil Senior",
+//     rol: "Chief Information Security Officer"
+// });
 
 profile1.save().then(respuesta => {    
     console.log("Documento guardado Correctamente! 😃");                 
@@ -57,12 +57,12 @@ profile1.save().then(respuesta => {
     console.log("Error :" + error);
 });
 
-profile2.save().then(respuesta => {    
-    console.log("Documento guardado Correctamente! 😃");                 
-    console.log(respuesta);
-}) .catch(error =>  {
-    console.log("Error :" + error);
-});
+// profile2.save().then(respuesta => {    
+//     console.log("Documento guardado Correctamente! 😃");                 
+//     console.log(respuesta);
+// }) .catch(error =>  {
+//     console.log("Error :" + error);
+// });
 
 let creedentials1 = new Creedentials ({
     address: "Calle El Quinto Pino",
