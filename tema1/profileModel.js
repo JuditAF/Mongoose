@@ -4,14 +4,14 @@ const mongoose = require("mongoose");
 // mongoose.connect( mongo, {useNewUrlParser: true, useUnifiedTopology: true} );
 
 const ProfileSchema = new mongoose.Schema({
-    name: String,
-    surname: String,
-    dateOfBirth: Date,
-    Comments: String,
-    rol: String
+  name: String,
+  surname: String,
+  dateOfBirth: Date,
+  Comments: String,
+  rol: String,
 });
 
 const Profile = mongoose.model("Profile", ProfileSchema);
 
-module.exports =  Profile;
+module.exports = Profile;
 // module.exports = mongoose.model("Profile", ProfileSchema);                    //DEPRECATED?
