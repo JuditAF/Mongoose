@@ -9,6 +9,7 @@ const CreedentialsSchema = new mongoose.Schema({
     email: String
 });
 
-const CreedentialsModel = mongoose.model("CreedentialsModel", CreedentialsSchema);
+const Creedentials = mongoose.model("Creedentials", CreedentialsSchema);
 
-module.exports = mongoose.model("CreedentialsModel", CreedentialsSchema);
+module.exports = mongoose.model = { Creedentials };
+// module.exports = mongoose.model("Creedentials", CreedentialsSchema);                      //DEPRECATED?

@@ -8,18 +8,7 @@ const UserSchema = new mongoose.Schema({
     password: String
   });
 
-// let userModelDocument = new User ({
-//     login: "struendOrtiga@this.getMaxListeners.com",
-//     password: "456OPU987"
-// });
+const User = mongoose.model("User", UserSchema);
 
-// userModelDocument.save().then(respuesta => {    
-//     console.log("Documento guardado Correctamente!");                 
-//     console.log(respuesta);
-// }) .catch(error =>  {
-//     console.log("Error :" + error);
-// });
-
-const UserModel = mongoose.model("UserModel", UserSchema);
-
-module.exports = mongoose.model("UserModel", UserSchema);
+module.exports = mongoose.model = { User };
+  // module.exports = mongoose.model("User", UserSchema);                    //DEPRECATED?

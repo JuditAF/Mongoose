@@ -11,6 +11,7 @@ const ProfileSchema = new mongoose.Schema({
     rol: String
 });
 
-const ProfileModel = mongoose.model("ProfileModel", ProfileSchema);
+const Profile = mongoose.model("Profile", ProfileSchema);
 
-module.exports = mongoose.model("ProfileModel", ProfileSchema);
+module.exports = mongoose.model = { Profile };
+// module.exports = mongoose.model("Profile", ProfileSchema);                    //DEPRECATED?
