@@ -8,14 +8,13 @@ const UserSchema = new mongoose.Schema({
     password: String
   });
 
-//   let userDocument = new User ({name: "Juan",
-//     email: "ultimateSeason@gmail.com",
-//     role: "Editor/a",
-//     verified: false
+// let userModelDocument = new User ({
+//     login: "struendOrtiga@this.getMaxListeners.com",
+//     password: "456OPU987"
 // });
 
-// userDocument.save().then(respuesta => {    
-//     console.log("Documento guardado Correctamente!");                 // OPCIÓN PROMESAS THEN/CATCH
+// userModelDocument.save().then(respuesta => {    
+//     console.log("Documento guardado Correctamente!");                 
 //     console.log(respuesta);
 // }) .catch(error =>  {
 //     console.log("Error :" + error);
@@ -23,4 +22,4 @@ const UserSchema = new mongoose.Schema({
 
 const UserModel = mongoose.model("UserModel", UserSchema);
 
-module.exports = mongoose.model("User", UserSchema, "users");
+module.exports = mongoose.model("UserModel", UserSchema);
