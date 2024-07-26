@@ -8,7 +8,5 @@ const UserSchema = new mongoose.Schema({
   password: String,
 });
 
-const User = mongoose.model("User", UserSchema);
-
 // module.exports = User;                                               // ESTE MODELO NO CONECTA CON MONGO, EXPORTA UN ESQUEMA DIRECTO
 module.exports = mongoose.model("User", UserSchema);                    //DEPRECATED?
