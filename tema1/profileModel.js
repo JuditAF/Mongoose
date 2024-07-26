@@ -1,8 +1,5 @@
 const mongoose = require("mongoose");
 
-// const mongo = 'mongodb://localhost:27017/codenotch';
-// mongoose.connect( mongo, {useNewUrlParser: true, useUnifiedTopology: true} );
-
 const ProfileSchema = new mongoose.Schema({
   name: String,
   surname: String,
@@ -13,5 +10,5 @@ const ProfileSchema = new mongoose.Schema({
 
 const Profile = mongoose.model("Profile", ProfileSchema);
 
-module.exports = Profile;
-// module.exports = mongoose.model("Profile", ProfileSchema);                    //DEPRECATED?
+// module.exports = Profile;                                                  // ESTE MODELO NO CONECTA CON MONGO, EXPORTA UN ESQUEMA DIRECTO
+module.exports = mongoose.model("Profile", ProfileSchema);                    //DEPRECATED?

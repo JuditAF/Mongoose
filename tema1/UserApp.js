@@ -6,7 +6,7 @@ const Creedentials = require("./creedentialsModel");
 
 // const mongo = 'mongodb://localhost:27017/codenotch';                                     // DEPRECATED?
 // mongoose.connect( mongo, {useNewUrlParser: true, useUnifiedTopology: true} );
-mongoose.connect("mongodb://localhost:27017/codenotch", {
+mongoose.connect("mongodb://localhost:27017/codenotch", {                                   // PARA EVITAR PROBLEMAS USAR LA DIRECCIÓN 127.0.0.1
   useNewUrlParser: false,
   useUnifiedTopology: false,
 });

@@ -10,5 +10,5 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", UserSchema);
 
-module.exports = User;
-// module.exports = mongoose.model("User", UserSchema);                    //DEPRECATED?
+// module.exports = User;                                               // ESTE MODELO NO CONECTA CON MONGO, EXPORTA UN ESQUEMA DIRECTO
+module.exports = mongoose.model("User", UserSchema);                    //DEPRECATED?
