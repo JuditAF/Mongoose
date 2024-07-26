@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 let User = require('./userMDB');                                                            // IMPORTO ESQUEMA
 
-const mongo = 'mongodb://localhost:27017/codenotch';                                        // CREAMOS CONEXIÓN CON BASE DE DATOS
+const mongo = 'mongodb://127.0.0.1:27017/codenotch';                                        // CREAMOS CONEXIÓN CON BASE DE DATOS
 mongoose.connect( mongo, {useNewUrlParser: true, useUnifiedTopology: true} );
 
 // mongoose.createConnection(mongo, { useNewUrlParser: true });                             // DEPRECATED WEB
