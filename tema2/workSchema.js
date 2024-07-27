@@ -26,5 +26,6 @@ let teachersSchema = new mongoose.Schema({
 
 subjectsSchema.add({teachers: [teachersSchema]})
 
+const Students = mongoose.model("Students", studentsSchema);
 
 module.exports = mongoose.model("Students", studentsSchema, 'students');        // SOLO HAY QUE HACER LA COLECCIÓN ESTUDIANTES, TRABAJAREMOS CON SUBDOCUMENTOS
