@@ -35,28 +35,42 @@ mongoose.connect("mongodb://localhost:27017/codenotch", {                       
     description: "Imagen tocando un instrumento"
   });
 
-  photo1.save()
+  // MÉTODO INICIAL
+
+//   photo1.save()
+//   .then((respuesta) => {
+//     console.log("Foto de " +  photo1.nameUser + " guardado Correctamente! 🤩");
+//     console.log(respuesta);
+//     return photo2.save();
+//   })
+//   .then((respuesta) => {
+//     console.log("Foto de " +  photo2.nameUser + " guardado Correctamente! 🤩");
+//     console.log(respuesta);
+//     return photo3.save();
+//   })
+//   .then((respuesta) => {
+//     console.log("Foto de " +  photo3.nameUser + " guardado Correctamente! 🤩");
+//     console.log(respuesta);
+//     return photo4.save();
+//   })
+//   .then((respuesta) => {
+//     console.log("Foto de " +  photo4.nameUser + " guardado Correctamente! 🤩");
+//     console.log(respuesta);
+//   })
+//   .catch((error) => {
+//     console.log("Error :" + error);
+//   });
+
+  // MÉTODO CRUD
+
+  Photos.insertMany([photo1, photo2, photo3, photo4])
   .then((respuesta) => {
-    console.log("Foto de " +  photo1.nameUser + " guardado Correctamente! 🤩");
+    console.log("Documentos guardados Correctamente! 🤩");
     console.log(respuesta);
-    return photo2.save();
-  })
-  .then((respuesta) => {
-    console.log("Foto de " +  photo2.nameUser + " guardado Correctamente! 🤩");
-    console.log(respuesta);
-    return photo3.save();
-  })
-  .then((respuesta) => {
-    console.log("Foto de " +  photo3.nameUser + " guardado Correctamente! 🤩");
-    console.log(respuesta);
-    return photo4.save();
-  })
-  .then((respuesta) => {
-    console.log("Foto de " +  photo4.nameUser + " guardado Correctamente! 🤩");
-    console.log(respuesta);
+    mongoose.disconnect();
   })
   .catch((error) => {
-    console.log("Error :" + error);
+    console.log("Error al escribir el Documento. Error Tipo: " + error);
   });
 
 
