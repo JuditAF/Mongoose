@@ -65,7 +65,7 @@ async function getPhotos(name) {
     }
 }
 
-getPhotos("Plutarco de Queronea");
+getPhotos("Plutarco de Queronea");                      // DEVUELVE UN ARRAY CON LOS DATOS
 
 // Modificar fotos:
 // Dado el titulo de una foto y una descripción modificar su descripción.
@@ -74,7 +74,7 @@ async function descriptionUp(title, commment) {
     try {
         let user = await Photos.updateOne({ "titlePhoto": title }, { "description": commment });
         console.log(user);
-        console.log("El " + title + " representado en la " + commment);
+        console.log("!Descripción actualizada correctamente! ✒️: El " + title + " representado en la " + commment);
         mongoose.disconnect();
     } catch (error) {
         console.log("Error al obtener las fotos. Error tipo: " + error);
