@@ -31,7 +31,8 @@ let student1 = new Students({
                 mark: 9,
                 subject:
                 {
-                    title: "dibujo técnico", teachers: [
+                    title: "dibujo técnico", 
+                    teachers: [
                         {
                             firstname: "Nayara",
                             lastname: "Uribe Franco",
@@ -66,7 +67,8 @@ let student2 = new Students({
                 mark: 9,
                 subject:
                 {
-                    title: "astronomía", teachers: [
+                    title: "astronomía", 
+                    teachers: [
                         {
                             firstname: "Idrys",
                             lastname: "Mencia Lupiañez",
@@ -101,7 +103,8 @@ let student3 = new Students({
                 mark: 8,
                 subject:
                 {
-                    title: "diseño gráfico", teachers: [
+                    title: "diseño gráfico", 
+                    teachers: [
                         {
                             firstname: "Manuel",
                             lastname: "Fernández Valle",
