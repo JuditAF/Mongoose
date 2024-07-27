@@ -56,7 +56,7 @@ async function getTeachersStudent(firstname, lastname) {
         if (student) {
             const teachers = [];
             student.marks.forEach(mark => {
-                mark.subject.teachers.forEach(teacher => {
+                mark.subject.teachers.map(teacher => {
                     teachers.push(`${teacher.firstname} ${teacher.lastname}`);
                 });
             });
