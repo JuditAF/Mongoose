@@ -16,4 +16,6 @@ const teacherSchema = new mongoose.Schema ({
 
 marksSchema.add({teachers:[teacherSchema]});
 
+const Marks = mongoose.model("Marks", marksSchema);
+
 module.exports = mongoose.model("Marks", marksSchema, "marks");
