@@ -32,17 +32,16 @@ getMarksStudent("Leonardo", "Merino Rodríguez");
 
 async function getSubjectsStudent(firstname, lastname) {
     try {
-        const student = await Students.findOne({ firstname, lastname }, { "marks.subject.title": 1, _id: 0 });
+        const student = await Students.findOne({ firstname: firstname, lastname: lastname }, { "marks": 1, _id: 0 });
         if (student) {
-            const subjectsStudent = student.marks.map(mark => mark.subject.title);
-            console.log("Las asignaturas en las que se encuentra inscrito el alumno " + firstname.blue + " " + lastname.blue + " son: " + subjectsStudent + " ✨");
+            console.log(student);
+            student.marks.map(mark => console.log(mark.subject.title));
+            console.log(student.marks);
         } else {
             console.log("🤪 El estudiante no existe 🤪");
         };
-        mongoose.disconnect();
     } catch (error) {
         console.error("Error al obtener las asignaturas del estudiante: " + firstname + " " + lastname + "\n ❌ Error tipo: " + error);
-        mongoose.disconnect();
     }
 };
 
@@ -50,27 +49,27 @@ getSubjectsStudent("Alana", "Hadey Anderson");
 
 //   Todos los profesores de un alumno
 
-async function getTeachersStudent(firstname, lastname) {
-    try {
-        const student = await Students.findOne({ firstname, lastname }, { "marks.subject.teachers": 1, _id: 0 });
-        if (student) {
-            const teachers = [];
-            student.marks.forEach(mark => {
-                mark.subject.teachers.map(teacher => {
-                    teachers.push(`${teacher.firstname} ${teacher.lastname}`);
-                });
-            });
-            console.log("Los profesores quienes les imparten clase al alumno " + firstname + " " + lastname + " son: " + teachers + " 📕")
-            // return teachers;
-        } else {
-            console.log(console.log("🤪 El estudiante no existe 🤪"));
-            return [];
-        }
-        mongoose.disconnect();
-    } catch (error) {
-        console.error(error);
-        mongoose.disconnect();
-    }
-};
+// async function getTeachersStudent(firstname, lastname) {
+//     try {
+//         const student = await Students.findOne({ firstname, lastname }, { "marks.subject.teachers": 1, _id: 0 });
+//         if (student) {
+//             const teachers = [];
+//             student.marks.forEach(mark => {
+//                 mark.subject.teachers.map(teacher => {
+//                     teachers.push(`${teacher.firstname} ${teacher.lastname}`);
+//                 });
+//             });
+//             console.log("Los profesores quienes les imparten clase al alumno " + firstname + " " + lastname + " son: " + teachers + " 📕")
+//             // return teachers;
+//         } else {
+//             console.log(console.log("🤪 El estudiante no existe 🤪"));
+//             return [];
+//         }
+//         mongoose.disconnect();
+//     } catch (error) {
+//         console.error(error);
+//         mongoose.disconnect();
+//     }
+// };
 
-getTeachersStudent("Libertad", "Padilla Franco");
+// getTeachersStudent("Libertad", "Padilla Franco");
